@@ -1,0 +1,23 @@
+{
+  "name": "plain-english-browser-qa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/cli.js",
+    "test": "node --test",
+    "demo": "node --env-file-if-exists=.env scripts/demo.js",
+    "smoke": "node --env-file-if-exists=.env scripts/phptravels-smoke.js",
+    "test:ai": "node --env-file-if-exists=.env scripts/ai-flows.js",
+    "test:autocomplete": "node --env-file-if-exists=.env scripts/autocomplete-regression.js",
+    "test:flights": "node scripts/phptravels-flight-check.js",
+    "test:general": "node --env-file-if-exists=.env scripts/general-regression.js",
+    "test:general:ai": "node --env-file-if-exists=.env scripts/general-regression.js --ai"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.56.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
